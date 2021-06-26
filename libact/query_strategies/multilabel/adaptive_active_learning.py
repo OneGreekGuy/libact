@@ -150,8 +150,7 @@ class AdaptiveActiveLearning(QueryStrategy):
 
         #    approx_err.append(np.sum(err))
 
-        choices = np.where(np.array(approx_err) == np.min(approx_err))[0]
-        print(choices)
+        choices = np.where(np.array(approx_err) == np.min(approx_err))[0]        
         ask_idx = candidates[self.random_state_.choice(choices)]
 
-        return unlabeled_entry_ids[ask_idx],choices
+        return (unlabeled_entry_ids[ask_idx],choices)
