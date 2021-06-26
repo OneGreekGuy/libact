@@ -154,4 +154,4 @@ class AdaptiveActiveLearning(QueryStrategy):
         print(choices)
         ask_idx = candidates[self.random_state_.choice(choices)]
 
-        return unlabeled_entry_ids[ask_idx]
+        return unlabeled_entry_ids[ask_idx],choices
